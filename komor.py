@@ -26,7 +26,7 @@ def scrap_komor(x, y):
                 numer_kw = re.findall(numer_kw_regex, str(announce))
                 adres = re.findall(adres_regex, str(announce))
 
-                with open("books", "a") as plik2:
+                with open("books.txt", "a") as plik2:
                     print("Znaleziono numer kw: {} oraz adres {}".format(numer_kw, adres))
                     plik2.write("--------------------------\n")
                     plik2.write("Znaleziono numer kw: {} oraz adres {} \n".format(numer_kw, unicodedata.normalize('NFKC', str(adres)) + "\n"))
